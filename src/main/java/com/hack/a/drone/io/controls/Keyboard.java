@@ -35,37 +35,36 @@ public class Keyboard implements IController, KeyEventDispatcher {
     private void onKeyEvent(KeyEvent e, boolean isPressed) {
         int value = isPressed ? 127 : 0;
         boolean newInput = true;
-//         TODO implement
         switch (e.getKeyCode()) {
-            case VK_W: // TODO implement (UP)
+            case VK_W: //  (UP)
                 command.setThrottle(value);
                 break;
-            case VK_Z: // TODO implement (DOWN)
+            case VK_Z: // (DOWN)
             case VK_X:    
                 command.setThrottle(-value);
                 break; 
-            case VK_D: // TODO implement (TURN RIGHT)
+            case VK_D: // (TURN RIGHT)
                 command.setYaw(value);
                 break;
-            case VK_A: // TODO implement (TURN LEFT)
+            case VK_A: // (TURN LEFT)
                 command.setYaw(-value);
                 break;
-            case VK_UP: // TODO implement (FORWARD)
+            case VK_UP: // (FORWARD)
                 command.setPitch(value);
                 break;
-            case VK_DOWN:// TODO implement (BACKWARD)
+            case VK_DOWN: // (BACKWARD)
                 command.setPitch(-value);
                 break;
-            case VK_RIGHT:// TODO implement (LEAN RIGHT)
+            case VK_RIGHT: // (LEAN RIGHT)
                 command.setRoll(value);
                 break;
-            case VK_LEFT:// TODO implement (LEAN LEFT)
+            case VK_LEFT: //(LEAN LEFT)
                 command.setRoll(-value);
                 break;
-            case VK_SPACE:// TODO implement
+            case VK_SPACE: 
                 command.setTakeOff(isPressed);
                 break;
-            case VK_S:// TODO implement
+            case VK_S: 
                 command.setLand(isPressed);
                 break;
             default:
